@@ -13,11 +13,6 @@ jobs:
       - name: Deploy Application
         run: |
           set -e
-
           cd /opt/kernaleye/nexus
-
           git pull origin main
-
-          docker pull node:22
-
           docker compose up -d --build
